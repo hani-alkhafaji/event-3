@@ -51,7 +51,7 @@
                 <input type="text" id="eventTitle" placeholder="e.g. Register For Latin Party" required>
             </div>
             <div class="form-group">
-                <label>Going – main number (e.g. 187 People Going)</label>
+                <label>Going – main number (e.g. ... People Going)</label>
                 <input type="number" id="goingNum" min="0" required>
             </div>
             <div class="form-group">
@@ -118,10 +118,10 @@
                     .then(function(data) {
                         if (data && data.error) throw new Error(data.error);
                         document.getElementById('eventTitle').value = (data && data.eventTitle) || '';
-                        document.getElementById('goingNum').value = (data && data.goingNum != null) ? data.goingNum : 187;
-                        document.getElementById('goingPlus').value = (data && data.goingPlus != null) ? data.goingPlus : 184;
-                        document.getElementById('interestingNum').value = (data && data.interestingNum != null) ? data.interestingNum : 34;
-                        document.getElementById('interestingPlus').value = (data && data.interestingPlus != null) ? data.interestingPlus : 31;
+                        document.getElementById('goingNum').value = (data && data.goingNum != null) ? data.goingNum : ...;
+                        document.getElementById('goingPlus').value = (data && data.goingPlus != null) ? data.goingPlus : ...;
+                        document.getElementById('interestingNum').value = (data && data.interestingNum != null) ? data.interestingNum : ...;
+                        document.getElementById('interestingPlus').value = (data && data.interestingPlus != null) ? data.interestingPlus : ...;
                     })
                     .catch(function() {
                         showMsg('تعذّر تحميل الإعدادات. تأكد من CONFIG_SCRIPT_URL و ADMIN_SECRET في Vercel.', true);
