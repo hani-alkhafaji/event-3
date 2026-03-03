@@ -95,9 +95,13 @@
             transition: color 0.25s;
         }
 
-        .counter-above.highlight-red {
-            color: #ff4444;
-        }
+      .counter-above.highlight-red {
+    color: #FFFFFF; /* النص يبقى أبيض */
+}
+
+.counter-above.highlight-red .counter-number {
+    color: #ff4444; /* الرقم فقط يصبح أحمر */
+}
 
         .profile-stack {
             display: flex;
