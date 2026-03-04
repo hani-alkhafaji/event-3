@@ -96,11 +96,11 @@
         }
 
         .counter-above.highlight-red {
-            color: #FFFFFF; /* keep text white */
+            color: #FFFFFF; /* النص يبقى أبيض */
         }
 
         .counter-above.highlight-red .counter-number {
-            color: #ff4444; /* only number red */
+            color: #ff4444; /* الرقم فقط يصبح أحمر */
         }
 
         .profile-stack {
@@ -355,12 +355,30 @@
     <div class="container">
         <h1 class="event-title">Waiting for the Text...</h1>
 
-        <!-- counters (numbers + text) directly under the title -->
+        <!-- الأعداد + النص مباشرة تحت العنوان -->
         <div class="two-columns">
             <div class="column">
                 <div class="counter-above" id="going-counter-above">
                     <span id="going-num" class="counter-number">...</span> People are Going
                 </div>
+            </div>
+
+            <div class="column">
+                <div class="counter-above" id="interesting-counter-above">
+                    <span id="interesting-num" class="counter-number">...</span> People Interesting
+                </div>
+            </div>
+        </div>
+
+        <!-- الأزرار تحت الأعداد وفوق الصور -->
+        <div class="buttons-row">
+            <button type="button" class="btn-action" id="btn-going">Going</button>
+            <button type="button" class="btn-action" id="btn-interesting">Interesting</button>
+        </div>
+
+        <!-- الصور الست + الأرقام تحت الصور (كما كانت) -->
+        <div class="two-columns">
+            <div class="column">
                 <div class="profile-stack">
                     <div class="circle" id="going-img-1">
                         <img src="going1.jpg" alt="" onerror="this.style.display='none'">
@@ -381,9 +399,6 @@
             </div>
 
             <div class="column">
-                <div class="counter-above" id="interesting-counter-above">
-                    <span id="interesting-num" class="counter-number">...</span> People Interesting
-                </div>
                 <div class="profile-stack">
                     <div class="circle" id="interesting-img-1">
                         <img src="interesting1.jpg" alt="" onerror="this.style.display='none'">
@@ -402,12 +417,6 @@
                     <span id="interesting-plus">31</span>+
                 </div>
             </div>
-        </div>
-
-        <!-- buttons now under the counters, above the images section -->
-        <div class="buttons-row">
-            <button type="button" class="btn-action" id="btn-going">Going</button>
-            <button type="button" class="btn-action" id="btn-interesting">Interesting</button>
         </div>
 
         <section class="form-section" id="form-section">
